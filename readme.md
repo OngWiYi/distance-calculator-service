@@ -17,7 +17,7 @@ Response body:
 - totalDistance
 - distanceUnit
 
-Distance Enum
+Distance Unit Enum
 - yards
 - meters
 
