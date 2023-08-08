@@ -61,7 +61,7 @@ public class DistanceCalculatorService {
             throw new BadRequestException("First distance unit is empty.");
         }
         if (!(firstDistanceUnit.equalsIgnoreCase(DistanceUnit.YARDS.toString()) ||
-                firstDistance.equalsIgnoreCase(DistanceUnit.METERS.toString()))) {
+                firstDistanceUnit.equalsIgnoreCase(DistanceUnit.METERS.toString()))) {
             LOGGER.error("First distance unit only accepts Yards and Meters");
             throw new BadRequestException("First distance unit only accepts Yards and Meters");
         }
@@ -70,7 +70,7 @@ public class DistanceCalculatorService {
             throw new BadRequestException("Second distance unit is empty.");
         }
         if (!(secondDistanceUnit.equalsIgnoreCase(DistanceUnit.YARDS.toString()) ||
-                secondDistance.equalsIgnoreCase(DistanceUnit.METERS.toString()))) {
+                secondDistanceUnit.equalsIgnoreCase(DistanceUnit.METERS.toString()))) {
             LOGGER.error("Second distance unit only accepts Yards and Meters");
             throw new BadRequestException("Second distance unit only accepts Yards and Meters");
         }
