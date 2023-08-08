@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class SumDistanceRequestBody {
+public class SumDistanceRequest {
     private String firstDistance;
     private String firstDistanceUnit;
     private String secondDistance;
