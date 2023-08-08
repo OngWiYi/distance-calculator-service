@@ -32,3 +32,10 @@ Service
 -------
 1. Converts the distance to the response unit
 2. Sum and return the distance
+
+Further Improvements
+======================
+1. Add authorization checking, (JWT, Basic auth etc)
+2. Add UI for this Rest Service
+3. Improve code quality as in adding sonar scans
+4. Allow users to do calculation with more metrics/ unit
