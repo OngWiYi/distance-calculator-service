@@ -39,3 +39,10 @@ Further Improvements
 2. Add UI for this Rest Service
 3. Improve code quality as in adding sonar scans
 4. Allow users to do calculation with more metrics/ unit
+
+Sample Response
+================
+200 Response
+![img.png](documents/200Response.png)
+400 Response
+![img.png](documents/400Response.png)
