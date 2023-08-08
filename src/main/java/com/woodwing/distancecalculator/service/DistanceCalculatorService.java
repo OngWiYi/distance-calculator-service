@@ -20,6 +20,18 @@ public class DistanceCalculatorService {
     private static final String RESPONSE_UNIT_INVALID_ERROR_MESSAGE = "Response distance unit only accepts Yards and " +
             "Meters";
 
+    /**
+     * To validate, convert and get the sum of two distances. It will convert the distances into the response unit
+     * specified.
+     *
+     * @param firstDistance      First distance in float
+     * @param firstDistanceUnit  The unit of first distance. In "YARDS" or "METERS" only.
+     * @param secondDistance     Second distance in float
+     * @param secondDistanceUnit The unit of second distance. In "YARDS" or "METERS" only.
+     * @param responseUnit       The unit of response distance. In "YARDS" or "METERS" only.
+     *
+     * @return Sum Distance Response object
+     */
     public SumDistanceResponse getSum(String firstDistance, String firstDistanceUnit, String secondDistance,
                                       String secondDistanceUnit, String responseUnit) {
         validateParams(firstDistance, firstDistanceUnit, secondDistance, secondDistanceUnit, responseUnit);
@@ -29,6 +41,17 @@ public class DistanceCalculatorService {
                                        distanceModel.getDistanceUnit().toString());
     }
 
+    /**
+     * Converts distances into the response unit as float
+     *
+     * @param firstDistance      First distance in float
+     * @param firstDistanceUnit  The unit of first distance. In "YARDS" or "METERS" only.
+     * @param secondDistance     Second distance in float
+     * @param secondDistanceUnit The unit of second distance. In "YARDS" or "METERS" only.
+     * @param responseUnit       The unit of response distance. In "YARDS" or "METERS" only.
+     *
+     * @return Distance model objects with first distance and second distance as float
+     */
     private DistanceModel convertsDistance(String firstDistance, String firstDistanceUnit, String secondDistance,
                                            String secondDistanceUnit, String responseUnit) {
         try {
@@ -46,6 +69,16 @@ public class DistanceCalculatorService {
         }
     }
 
+    /**
+     * Validate all the params to make sure there is no empty values and invalid unit. Throws BadRequestException if
+     * there is invalid param.
+     *
+     * @param firstDistance      First distance in float
+     * @param firstDistanceUnit  The unit of first distance. In "YARDS" or "METERS" only.
+     * @param secondDistance     Second distance in float
+     * @param secondDistanceUnit The unit of second distance. In "YARDS" or "METERS" only.
+     * @param responseUnit       The unit of response distance. In "YARDS" or "METERS" only.
+     */
     private void validateParams(String firstDistance, String firstDistanceUnit, String secondDistance,
                                 String secondDistanceUnit, String responseUnit) {
         if (!StringUtils.hasText(firstDistance)) {

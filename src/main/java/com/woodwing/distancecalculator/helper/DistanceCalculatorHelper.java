@@ -7,11 +7,13 @@ public class DistanceCalculatorHelper {
         throw new IllegalStateException("Utility class");
     }
     private static final float METER_YARD_CONVERSION_FACTORS = 1.093613298F;
+
     /**
      * Convert distance into targeted unit
-     * @param distance distance
+     *
+     * @param distance     distance
      * @param distanceUnit unit of the distance
-     * @param targetUnit target unit of the conversion
+     * @param targetUnit   target unit of the conversion
      *
      * @return converted distance in float
      */
